@@ -40,21 +40,21 @@ Minimum recommended: t2.micro instance
 
 ### b. Connect to Your EC2 Instance
 ```bash\
-ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
+ssh -i "your-key.pem" ec2-user@your-ec2-public-dns
 ```
 and install Docker on EC2
   
 ## c. Deploy Your Application
 **On EC2 instance:**
 ```bash
-git clone https://github.com/abhi0201src/zomato.git\
-cd zomato\
-docker build -t zomato-app .\
-docker run -p 80:3000 -d zomato-app\
+git clone https://github.com/abhi0201src/zomato.git
+cd zomato
+docker build -t zomato-app .
+docker run -p 80:3000 -d zomato-app
 ```
 **Accessing Your Application**\
 1. Get Your EC2 Instance's Public Address\
-Go to AWS Console > EC2 > Instances\
+Go to AWS Console > EC2 > Instances
 Select your instance
 Copy:\
 Public IPv4 address (e.g., 12.34.56.78)
