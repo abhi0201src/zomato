@@ -41,7 +41,6 @@ bash\
 ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
 ## c. Install Docker on EC2\
 ## d. Deploy Your Application
-bash
 # On EC2 instance:
 git clone https://github.com/abhi0201src/zomato.git\
 cd zomato\
