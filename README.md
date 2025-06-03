@@ -1,4 +1,4 @@
-### Project Overview
+# Project Overview
 This repository contains a JavaScript-based food delivery application (abhi0201src/zomato) packaged as a Docker container for deployment on AWS EC2 instances.
 
 Prerequisites
@@ -9,7 +9,7 @@ Before you begin, ensure you have the following installed:
 ** Git\
 ** Node.js (if developing locally)\
 
-# Deployment Steps
+### Deployment Steps
 1. Clone the Repository
 bash
 git clone https://github.com/abhi0201src/zomato.git
@@ -28,7 +28,7 @@ docker run -p 3000:3000 -d abhi0201src/zomato
 Visit: http://localhost:3000 in your browser
 
 ## 5. AWS EC2 Deployment
-# a. Launch an EC2 Instance
+### a. Launch an EC2 Instance
 Use Amazon Linux 2 or Ubuntu AMI
 
 Ensure security group allows:
@@ -38,12 +38,13 @@ HTTPS (port 443)\
 SSH (port 22)\
 Minimum recommended: t2.micro instance
 
-# b. Connect to Your EC2 Instance
+### b. Connect to Your EC2 Instance
 ```bash\
 ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
 ```
-# c. Install Docker on EC2
-# d. Deploy Your Application
+and install Docker on EC2
+  
+## c. Deploy Your Application
 *** On EC2 instance:
 ```bash
 git clone https://github.com/abhi0201src/zomato.git\
