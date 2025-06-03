@@ -26,22 +26,21 @@ docker run -p 3000:3000 -d abhi0201src/zomato
 Visit http://localhost:3000 in your browser
 
 5. AWS EC2 Deployment
-a. Launch an EC2 Instance
+##a. Launch an EC2 Instance
 Use Amazon Linux 2 or Ubuntu AMI
 
 Ensure security group allows:
 
 HTTP (port 80)\
 HTTPS (port 443)\
-SSH (port 22)
-
+SSH (port 22)\
 Minimum recommended: t2.micro instance
 
-b. Connect to Your EC2 Instance
+##b. Connect to Your EC2 Instance
 bash\
 ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
-c. Install Docker on EC2\
-d. Deploy Your Application
+##c. Install Docker on EC2\
+##d. Deploy Your Application
 bash
 # On EC2 instance:
 git clone https://github.com/abhi0201src/zomato.git\
