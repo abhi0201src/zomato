@@ -4,10 +4,10 @@ This repository contains a JavaScript-based food delivery application (abhi0201s
 Prerequisites
 Before you begin, ensure you have the following installed:
 
-- ** Docker**\
-** AWS CLI (configured with your credentials)\
-** Git\
-** Node.js (if developing locally)\
+-**Docker**\
+-**AWS CLI (configured with your credentials)**\
+-**Git**\
+-**Node.js (if developing locally)**\
 
 ### Deployment Steps
 1. Clone the Repository
@@ -45,19 +45,17 @@ ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
 and install Docker on EC2
   
 ## c. Deploy Your Application
-*** On EC2 instance:
+**On EC2 instance:**
 ```bash
 git clone https://github.com/abhi0201src/zomato.git\
 cd zomato\
 docker build -t zomato-app .\
 docker run -p 80:3000 -d zomato-app\
 ```
-Accessing Your Application\
+**Accessing Your Application**\
 1. Get Your EC2 Instance's Public Address\
 Go to AWS Console > EC2 > Instances\
-
 Select your instance
-
 Copy:\
 Public IPv4 address (e.g., 12.34.56.78)
 
