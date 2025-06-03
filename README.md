@@ -60,7 +60,7 @@ Public IPv4 address (e.g., 12.34.56.78)
 2. Access via Web Browser
 Enter in your browser:
 
-http://<your-public-ip>
+http://your-public-ip:3000
 
 
 
