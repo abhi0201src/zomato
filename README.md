@@ -1,71 +1,66 @@
-# Getting Started with Create React App
+Project Overview
+This repository contains a JavaScript-based food delivery application (abhi0201src/zomato) packaged as a Docker container for deployment on AWS EC2 instances.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prerequisites
+Before you begin, ensure you have the following installed:
 
-## Available Scripts
+Docker\
+AWS CLI (configured with your credentials)\
+Git\
+Node.js (if developing locally)\
 
-In the project directory, you can run:
+Deployment Steps
+1. Clone the Repository
+bash
+git clone https://github.com/abhi0201src/zomato.git
+cd zomato
+2. Install Dependencies (for local development)
+bash
+npm install
+3. Build the Docker Image
+bash
+docker build -t abhi0201src/zomato .
+4. Run the Container Locally (for testing)
+bash
+docker run -p 3000:3000 -d abhi0201src/zomato
+Visit http://localhost:3000 in your browser
 
-### `npm start`
+5. AWS EC2 Deployment
+a. Launch an EC2 Instance
+Use Amazon Linux 2 or Ubuntu AMI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ensure security group allows:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HTTP (port 80)\
+HTTPS (port 443)\
+SSH (port 22)
 
-### `npm test`
+Minimum recommended: t2.micro instance
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+b. Connect to Your EC2 Instance
+bash\
+ssh -i "your-key.pem" ec2-user@your-ec2-public-dns\
+c. Install Docker on EC2\
+d. Deploy Your Application
+bash
+# On EC2 instance:
+git clone https://github.com/abhi0201src/zomato.git\
+cd zomato\
+docker build -t zomato-app .\
+docker run -p 80:3000 -d zomato-app\
+Accessing Your Application\
+1. Get Your EC2 Instance's Public Address\
+Go to AWS Console > EC2 > Instances\
 
-### `npm run build`
+Select your instance
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Copy :
+Public IPv4 address (e.g., 12.34.56.78)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Access via Web Browser
+Enter in your browser:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+http://<your-public-ip>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Zomato-Clone
