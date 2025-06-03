@@ -4,10 +4,10 @@ This repository contains a JavaScript-based food delivery application (abhi0201s
 Prerequisites
 Before you begin, ensure you have the following installed:
 
--**Docker**\
--**AWS CLI (configured with your credentials)**\
--**Git**\
--**Node.js (if developing locally)**\
+- **Docker**\
+- **AWS CLI (configured with your credentials)**\
+- **Git**\
+- **Node.js (if developing locally)**\
 
 ### Deployment Steps
 1. Clone the Repository
